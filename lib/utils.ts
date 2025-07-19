@@ -6,15 +6,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Helper to check required env vars
-export const requireEnv = (varName: string): string => {
-  const value = process.env[varName];
-  if (!value) {
-    throw new Error(`Missing required environment variable: ${varName}`);
-  }
-  return value;
-};
-
 const techIconBaseURL = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
 const normalizeTechName = (tech: string) => {
